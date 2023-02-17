@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block css %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    {% endblock %}
+    <title>Contact</title>
+  </head>
+  <body>
+    {% block main %}
+    <h1 class="title">Contact</h1>
+    <hr />
+    <p>Fill in this form to contact the site owners</p>
+    <form action="" method="POST">
+      {{form.csrf_token}}
+      <div class="label-container">
+        {{form.name.label}}
+        <p>(Required)</p>
+      </div>
+      <p>Please enter your full name</p>
+      {{form.name}}
+      <div class="label-container">
+        {{form.email.label}}
+        <p>(Required)</p>
+      </div>
+      <p>Please enter your e-mail address</p>
+      {{form.email}}
+      <div class="label-container">
+        {{form.subject.label}}
+        <p>(Required)</p>
+      </div>
+      <p>Please enter the subject for your message</p>
+      {{form.subject}}
+      <div class="label-container">
+        {{form.text_area.label}}
+        <p>(Required)</p>
+      </div>
+      <p>Please enter the message you would like to send</p>
+      {{form.text_area}} {{form.submit_button}}
+    </form>
+    {% endblock %}
+  </body>
+</html>

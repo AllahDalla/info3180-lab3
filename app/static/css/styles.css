@@ -1,0 +1,48 @@
+
+h1 {
+
+}
+
+hr {
+    border: none;
+    border-top: 1px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+label {
+    font-weight: bold;
+}
+
+.label-container {
+    display: flex;
+    width: 45%;
+}
+
+.label-container > p {
+    margin-left: 5px;
+    color: red;
+}
+
+input {
+    width: 50%;
+}
+
+textarea {
+    width: 50%;
+    height: 20%;
+    margin-bottom: 2em;
+}
+
+#submit_button {
+    width: 15%;
+    background-color: #2987cd;
+    border: 1px solid #2987cd;
+    color: white;
+    border-radius: 4px;
+}
